@@ -1,0 +1,159 @@
+body{
+	text-align: center;
+	font-size: 14px;
+
+}
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.2fr 1fr 1fr 1fr; 
+	grid-template-areas: "nav nav nav nav"
+	"main main main side-bar"
+	"main main main side-bar"
+	"main main main side-bar"
+	"footer footer footer side-bar"
+}
+.col {
+ 	float: left;
+    width: 31%;
+    padding: 98px 13px;
+    font-weight: bold;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.primary-btn{
+	padding: 10px 20px;
+    border-radius: 5px;
+    background: #72c3dc;
+    box-shadow: 0px 3px #2b8ead;
+    display: block;
+    margin:auto;
+    margin-bottom: 10px;
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #72c3dc;
+
+}
+main{
+	grid-area: main;
+	background: #efefef;
+	color: #ffffff;
+}
+nav {
+	background: #ffffff;
+	grid-area: nav;
+	text-align: center;
+}
+
+#side-bar{
+	background: #efefef;
+	grid-area: side-bar;
+}
+.side-bar-div{
+	margin: 0px auto;
+}
+
+#container-1 {
+	background: #6f98ab;
+	grid-area: container-1;
+	
+  	font-size: 30px;
+}
+#container-2 {
+	background: #2b8ead;
+	grid-area: container-2;
+  	font-size: 30px;
+}
+footer{
+	background: #efefef;
+	grid-area: footer;
+	padding: 20px 0px;
+}
+#container-3 {
+	background: #2f454e;
+	grid-area: container-3;
+  	font-size: 30px;	
+}
+#container-4 {
+	background: #2b8ead;
+	grid-area: container-4;
+  	font-size: 30px;
+}
+#container-5 {
+	background: #2f454e;
+	grid-area: container-5;
+  	font-size: 30px;
+}
+#container-6 {
+	background: #bfbfbf;
+	grid-area: container-6;
+  	font-size: 30px;
+}
+#container-7 {
+	background: #bfbfbf;
+	grid-area: container-7;
+  	font-size: 30px;
+}
+#container-8 {
+	background: #6f98ab;
+	grid-area: container-8;
+  	font-size: 30px;
+}
+#container-9 {
+	background: #2f454e;
+	grid-area: container-9;
+  	font-size: 30px;
+}
+
+/*CSS for Mobile View*/
+@media only screen and (max-width: 550px){
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.5fr 0.5fr 4fr 0.5fr;
+		grid-template-areas: "nav" 
+		"side-bar"
+		"main"
+		"footer";
+	}
+
+	main, #side-bar,footer {background: #ffffff;}
+
+	nav {
+		color: #ffffff;
+		font-size: 20px;
+		background: #333333;
+		padding-top: 20px;
+	}
+	
+	.col {
+		float: none;
+		padding: 10px 0px;
+		width: 100%;
+	}
+
+	.primary-btn {
+		padding: 10px 20px;
+		border-radius: 5px;
+		background: #72c3dc;
+		box-shadow: 0px 3px #2b8ead;
+		float: left;
+		margin: 0px 10px;
+		width: auto;
+		border: 1px solid #72c3dc;
+	}
+
+	.side-bar-div {
+		width: 60%;
+    	padding: 10px;
+	    margin-left: 62px;
+	    margin: auto;
+	    overflow: hidden;
+	}
+}
+
